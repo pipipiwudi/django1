@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+class UserInfoAdmin(admin.ModelAdmin):
+    list_display = ['uname','upwda', 'uemail', 'ushou','uaddress','uyoubian','uphone']
+    list_per_page = 15
+
+
+admin.site.register(UserInfo,UserInfoAdmin)

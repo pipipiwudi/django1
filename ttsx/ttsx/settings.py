@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'df_user',
+    'df_goods',
+    'tinymce',
+    'df_cart',
+    'df_order'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +130,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+# MEDIA_ROOT='/var/www/ttsx/static'
+
+TINYMCE_DEFAULT_CONFIG={
+    'theme':'advanced',
+    'width':600,
+    'height':400,
+}

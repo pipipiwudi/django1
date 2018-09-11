@@ -18,6 +18,9 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', include('df_user.urls'))
-
+    path('user/', include('df_user.urls')),
+    path('tinymce',include('tinymce.urls')),
+    path('goods/',include('df_goods.urls')),
+    path('cart/',include('df_cart.urls')),
+    path('order/',include('df_order.urls')),
 ]
